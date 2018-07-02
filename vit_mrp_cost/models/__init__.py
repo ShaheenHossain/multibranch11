@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 
 
-import mrp_production
+from . import mrp_production

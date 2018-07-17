@@ -1,0 +1,33 @@
+<odoo>
+    <data noupdate='1'>
+
+        <record id="mrp_bom_company_branch_rules" model="ir.rule">
+            <field name="name">Mrp Bom Company Branch</field>
+            <field name="model_id" ref="model_mrp_bom"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_branch_id','=',False), ('company_branch_id', '=', user.company_branch_id.id)]</field>
+        </record>
+
+         <record id="mrp_bom_line_company_branch_rules" model="ir.rule">
+            <field name="name">Mrp Bom Line Company Branch</field>
+            <field name="model_id" ref="model_mrp_bom_line"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_branch_id','=',False), ('company_branch_id', '=', user.company_branch_id.id)]</field>
+        </record>
+
+        <record id="mrp_production_company_branch_rules" model="ir.rule">
+            <field name="name">Mrp Production Company Branch</field>
+            <field name="model_id" ref="model_mrp_production"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_branch_id','=',False), ('company_branch_id', '=', user.company_branch_id.id)]</field>
+        </record>
+
+         <record id="mrp_workorder_company_branch_rules" model="ir.rule">
+            <field name="name">Mrp Workorder Company Branch</field>
+            <field name="model_id" ref="model_mrp_workorder"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_branch_id','=',False), ('company_branch_id', '=', user.company_branch_id.id)]</field>
+        </record>
+
+    </data>
+</odoo>
